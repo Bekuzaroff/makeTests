@@ -24,7 +24,10 @@
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/typeorm": "^11.0.0",
+<<<<<<< HEAD
     "class-transformer": "^0.5.1",
+=======
+>>>>>>> ea2e62f7bd05fa9383f403e0c827cb74e4940891
     "class-validator": "^0.14.1",
     "pg": "^8.14.1",
     "reflect-metadata": "^0.2.2",
