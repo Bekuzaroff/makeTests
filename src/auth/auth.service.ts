@@ -13,6 +13,10 @@ export class AuthService{
 
     create_user(user: CreateUserDto){
         const new_user = this.userRepository.create(user)
+
+        if(user.password !== user.confirm_password){
+            throw new Error("passwords do not match");
+        }
         this.userRepository.save(new_user);
         return {
             status: 'success'
