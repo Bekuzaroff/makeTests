@@ -3,12 +3,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { User } from './auth/entities/user.entity';
 
 @Module({
   imports: [AuthModule, TypeOrmModule.forRootAsync({
     useFactory: () => ({
       type: 'postgres',
-      entities: [],
+      entities: [User],
       synchronize: true,
       host: 'localhost',
       port: 5432,
